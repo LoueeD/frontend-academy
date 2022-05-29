@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import sdk from '@stackblitz/sdk';
+
 
 const props = defineProps({
   html: { default: null },
@@ -25,34 +25,19 @@ const getGeneratedPageURL = (html) => {
   return getBlobURL(source, 'text/html');
 };
 
-const url = ref(getGeneratedPageURL('this is a test'));
+const url = ref('');
 
-const iframes = Array.from(document.querySelectorAll('iframe.text-base.w-full.rounded'));
-iframes.forEach((el: HTMLIFrameElement) => {
-  console.log(el);
-  window.addEventListener('message', (payload) => {
-    if (payload.source === el.contentWindow) {
-      console.log(payload);
-    }
-  });
-});
+// const iframes = Array.from(document.querySelectorAll('iframe.text-base.w-full.rounded'));
+// iframes.forEach((el: HTMLIFrameElement) => {
+//   console.log(el);
+//   window.addEventListener('message', (payload) => {
+//     if (payload.source === el.contentWindow) {
+//       console.log(payload);
+//     }
+//   });
+// });
 
-// Create the index.ts file
-// const code = `document.getElementById('time').innerHTML = 'test';`;
 
-// Create the index.html file
-// const html = `<h1>I was created on <span id='time'></span></h1>`;
-
-// Create the project payload.
-// const project = {
-//   files: {
-//     'index.js': code,
-//     'index.html': html,
-//   },
-//   title: 'Dynamically Generated Project',
-//   description: 'Created with <3 by the StackBlitz SDK!',
-//   template: 'javascript',
-// };
 
 window.addEventListener('message', (payload) => {
   if (typeof payload.data !== 'object') {
@@ -71,6 +56,9 @@ window.addEventListener('message', (payload) => {
 const embedded = ref<HTMLIFrameElement | null>(null);
 
 onMounted(() => {
+
+
+
   // console.log(embedded.value);
   // if (embedded.value) {
     // embedded.value.contentWindow.postMessage({
@@ -92,7 +80,10 @@ onMounted(() => {
 
 <template>
   <div class="code-snippet">
-    <iframe ref="embedded" id="embed" :src="url" frameborder="0"></iframe>
+    <iframe v-if="url" ref="embedded" id="embed" :src="url" frameborder="0"></iframe>
+    <div v-else class="edit-code">
+      Edit the code snippet
+    </div>
     <!-- <div id="embed"></div> -->
     <!-- <div class="code-snippet__code">
       <div class="code-snippet__col">

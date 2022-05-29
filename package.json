@@ -6,15 +6,10 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@codemirror/lang-css": "^0.20.0",
-    "@codemirror/lang-html": "^0.20.0",
-    "@codemirror/lang-javascript": "^0.20.0",
-    "@codemirror/theme-one-dark": "^0.20.0",
     "@slidev/cli": "^0.27.0",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
-    "@stackblitz/sdk": "^1.6.0",
-    "sass": "^1.52.1",
-    "vue-codemirror": "^5.0.1"
+    "monaco-editor": "^0.33.0",
+    "sass": "^1.52.1"
   }
 }

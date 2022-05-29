@@ -15,6 +15,7 @@ info: |
   Learn more at [Sli.dev](https://sli.dev)
 drawings:
   persist: false
+monaco: true
 title: Academy - Advanced CSS
 ---
 
