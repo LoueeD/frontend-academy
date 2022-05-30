@@ -104,8 +104,8 @@ With a little margin you can see that the Flow layout stacks these elements on t
   display: block;
 }
 </style>
-<div class="box"></div>
-<div class="box"></div>
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
 ```
 
 ::right::
@@ -120,11 +120,50 @@ With a little margin you can see that the Flow layout stacks these elements on t
 -->
 
 ---
+layout: two-cols
+---
 
-# Inline elements
+<style>
+.two-columns {
+  @apply gap-10
+}
+</style>
+## Inline elements
 
 - Inline elements ignore width and height
+  - This is because inline elements flow with content on the page.
 - Margin top and bottom are also ignored
 - Inline elements only take up the space they need
 
+::right::
+
+## Block elements
+
+- Block elements respect width and height
+- Margin top, right, bottom, left apply to blocks
+- Block elements have 100% width by default
+  - E.g A paragraph tag will fill the horizontal space
+- Block elements take up the vertical space they need
+
+---
+layout: two-cols
+---
+
+<style>
+.two-columns {
+  @apply gap-10
+}
+</style>
+
+## Inline Block
+- Inline block element flows with the content but also applied width and height like a block level element.
+
+::right::
+
+![Inline vs Block](/inline-vs-block.png)
+
+---
+layout: iframe
+
+url: https://www.youtube.com/embed/yMEjLBKyvEg
 ---
