@@ -189,9 +189,8 @@ layout: default
 
 Tables are for structured data in rows and columns and when they work very well with accessibility tools such as screen readers which help with sighted and visually impaired users.
 
-### Usecases
+## Usecases
 - Structured Data
-- Sortable Data
 - Numerical Data
 - Accessable
 
@@ -226,6 +225,45 @@ layout: default
 TODO
 
 ---
-layout: default
+layout: section
 ---
+
+# Flex / Flexbox
+---
+layout: default
+--- 
+
+# Flex
+
+TODO
+
+---
+layout: section
+---
+
+# CSS Grid
+---
+layout: default
+--- 
+
+# CSS Grid
+
+TODO
+
+```html {monaco}
+<style>
+.grid {
+	grid-template-columns: repeat(2, 1fr);
+	display: grid;
+}
+</style>
+<div class="grid">
+  <div style="background: red"></div>
+  <div style="background: blue"></div>
+  <div style="background: red"></div>
+  <div style="background: blue"></div>
+  <div style="background: red"></div>
+</div>
+```
+
 
