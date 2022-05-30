@@ -58,7 +58,8 @@ Learn more: https://sli.dev/guide/syntax#embedded-styles
 -->
 
 ---
-
+layout: two-cols
+---
 # Layout Modes
 
 The core of UI design with CSS are layouts. Layouts come in all shapes and sizes. A layout designed for a desktop is dramatically different to a mobile phone layout.
@@ -67,9 +68,22 @@ All of these layouts are created with CSS Layout modes.
 
 - Flow
 - Table
+- Float
 - Positioned
 - Flex - Flexible Box
 - CSS Grid
+
+::right::
+
+<style>
+img {
+  position: relative;
+  z-index: 10;
+  margin-top: -1.5rem;
+}
+</style>
+
+![Layout Modes](/css-layout-mode.png)
 
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
