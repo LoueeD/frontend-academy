@@ -90,6 +90,12 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
+layout: section
+---
+
+# Flow
+
+---
 
 # Default Flow
 
@@ -141,43 +147,85 @@ layout: two-cols
 .two-columns {
   @apply gap-10
 }
+
+.two-columns img[src*="7rem"] {
+  height: 7rem;
+  margin-bottom: 3rem;
+  display: block;
+}
 </style>
-## Inline elements
 
-- Inline elements ignore width and height
-  - This is because inline elements flow with content on the page.
-- Margin top and bottom are also ignored
-- Inline elements only take up the space they need
-
-::right::
-
-## Block elements
+![Display Block](/block.png#7rem)
+### Block elements
 
 - Block elements respect width and height
 - Margin top, right, bottom, left apply to blocks
 - Block elements have 100% width by default
-  - E.g A paragraph tag will fill the horizontal space
-- Block elements take up the vertical space they need
-
----
-layout: two-cols
----
-
-<style>
-.two-columns {
-  @apply gap-10
-}
-</style>
-
-## Inline Block
-- Inline block element flows with the content but also applied width and height like a block level element.
+  - E.g A `<P>` tag will fill the horizontal space
+- Blocks take up the vertical space they need
 
 ::right::
 
-![Inline vs Block](/inline-vs-block.png)
+![Display Block](/inline.png#7rem)
+### Inline elements
+
+- Inline elements ignore width and height
+  - This is because inline elements flow with content on the page.
+- Margin top and bottom are also ignored
+- Inline only take up the space they need
+
 
 ---
-layout: iframe
-
-url: https://www.youtube.com/embed/yMEjLBKyvEg
+layout: section
 ---
+
+# Table
+
+---
+layout: default
+---
+
+# Table Layout
+
+Tables are for structured data in rows and columns and when they work very well with accessibility tools such as screen readers which help with sighted and visually impaired users.
+
+### Usecases
+- Structured Data
+- Sortable Data
+- Numerical Data
+- Accessable
+
+## Potental Issues
+- Responsive Design
+- Desktop First / Not usable on mobiles
+
+
+---
+layout: section
+---
+
+# Float
+---
+layout: default
+---
+# Float Layout
+
+TODO
+
+---
+layout: section
+---
+
+# Positioned
+---
+layout: default
+--- 
+
+# Positioned
+
+TODO
+
+---
+layout: default
+---
+
